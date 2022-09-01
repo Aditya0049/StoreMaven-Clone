@@ -1,0 +1,1389 @@
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+			<style type="text/css">
+					.heateor_sss_button_instagram span.heateor_sss_svg,a.heateor_sss_instagram span.heateor_sss_svg{background:radial-gradient(circle at 30% 107%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
+											.heateor_sss_horizontal_sharing .heateor_sss_svg,.heateor_sss_standard_follow_icons_container .heateor_sss_svg{
+							color: #fff;
+						border-width: 0px;
+			border-style: solid;
+			border-color: transparent;
+		}
+					.heateor_sss_horizontal_sharing .heateorSssTCBackground{
+				color:#666;
+			}
+					.heateor_sss_horizontal_sharing span.heateor_sss_svg:hover,.heateor_sss_standard_follow_icons_container span.heateor_sss_svg:hover{
+						border-color: transparent;
+		}
+		.heateor_sss_vertical_sharing span.heateor_sss_svg,.heateor_sss_floating_follow_icons_container span.heateor_sss_svg{
+							color: #fff;
+						border-width: 0px;
+			border-style: solid;
+			border-color: transparent;
+		}
+				.heateor_sss_vertical_sharing .heateorSssTCBackground{
+			color:#666;
+		}
+						.heateor_sss_vertical_sharing span.heateor_sss_svg:hover,.heateor_sss_floating_follow_icons_container span.heateor_sss_svg:hover{
+						border-color: transparent;
+		}
+		@media screen and (max-width:783px) {.heateor_sss_vertical_sharing{display:none!important}}		</style>
+		
+<!-- Search Engine Optimization by Rank Math PRO - https://s.rankmath.com/home -->
+<title>Storemaven | App Store A/B Testing for iOS &amp; Google Play</title><link rel="stylesheet" href="https://www.storemaven.com/wp-content/cache/min/1/bc91c65fce423c471240ed54b5f067c7.css" media="all" data-minify="1" />
+<meta name="description" content="Use Storemaven to A/B test mobile app icons, screenshots, videos, and descriptions on the App Store and Google Play. Trusted by 80% of top mobile brands."/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://www.storemaven.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Storemaven | App Store A/B Testing for iOS &amp; Google Play" />
+<meta property="og:description" content="Use Storemaven to A/B test mobile app icons, screenshots, videos, and descriptions on the App Store and Google Play. Trusted by 80% of top mobile brands." />
+<meta property="og:url" content="https://www.storemaven.com/" />
+<meta property="og:site_name" content="Storemaven" />
+<meta property="og:updated_time" content="2022-08-30T16:22:16+03:00" />
+<meta property="og:image" content="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1592237152/Storemaven-vertical-logo-page-dark@2x-8-1.png" />
+<meta property="og:image:secure_url" content="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1592237152/Storemaven-vertical-logo-page-dark@2x-8-1.png" />
+<meta property="og:image:width" content="640" />
+<meta property="og:image:height" content="360" />
+<meta property="og:image:alt" content="Storemaven" />
+<meta property="og:image:type" content="image/png" />
+<meta property="article:published_time" content="2020-03-21T11:12:21+02:00" />
+<meta property="article:modified_time" content="2022-08-30T16:22:16+03:00" />
+<meta property="og:video" content="https://res.cloudinary.com/storemaven/video/upload/q_90/v1588055061/Storemaven-PHONE.mp4" />
+<meta property="og:video" content="https://res.cloudinary.com/storemaven/video/upload/q_90/v1591171315/Countdown-full-hd-1.mp4" />
+<meta property="og:video" content="https://res.cloudinary.com/storemaven/video/upload/q_90/v1611688961/storemaven-video-new-1.mp4" />
+<meta property="ya:ovs:upload_date" content="2020-03-21EET11:12:21+02:00" />
+<meta property="ya:ovs:allow_embed" content="false" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Storemaven | App Store A/B Testing for iOS &amp; Google Play" />
+<meta name="twitter:description" content="Use Storemaven to A/B test mobile app icons, screenshots, videos, and descriptions on the App Store and Google Play. Trusted by 80% of top mobile brands." />
+<meta name="twitter:site" content="@storemaven" />
+<meta name="twitter:creator" content="@storemaven" />
+<meta name="twitter:image" content="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1592237152/Storemaven-vertical-logo-page-dark@2x-8-1.png" />
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.storemaven.com/#organization","name":"Storemaven","logo":{"@type":"ImageObject","@id":"https://www.storemaven.com/#logo","url":"https://res.cloudinary.com/storemaven/image/upload/v1/Storemaven-logo-for-rankmath","caption":"Storemaven","inLanguage":"en-US","width":"500","height":"500"}},{"@type":"WebSite","@id":"https://www.storemaven.com/#website","url":"https://www.storemaven.com","name":"Storemaven","publisher":{"@id":"https://www.storemaven.com/#organization"},"inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":"https://www.storemaven.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1592237152/Storemaven-vertical-logo-page-dark@2x-8-1.png","url":"https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1592237152/Storemaven-vertical-logo-page-dark@2x-8-1.png","width":"3841","height":"2160","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.storemaven.com/#webpage","url":"https://www.storemaven.com/","name":"Storemaven | App Store A/B Testing for iOS &amp; Google Play","datePublished":"2020-03-21T11:12:21+02:00","dateModified":"2022-08-30T16:22:16+03:00","about":{"@id":"https://www.storemaven.com/#organization"},"isPartOf":{"@id":"https://www.storemaven.com/#website"},"primaryImageOfPage":{"@id":"https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1592237152/Storemaven-vertical-logo-page-dark@2x-8-1.png"},"inLanguage":"en-US"},{"@type":"Article","headline":"Storemaven | App Store A/B Testing for iOS &amp; Google Play","datePublished":"2020-03-21T11:12:21+02:00","dateModified":"2022-08-30T16:22:16+03:00","author":{"@type":"Person","name":"Theodore Dominiak"},"description":"Use Storemaven to A/B test mobile app icons, screenshots, videos, and descriptions on the App Store and Google Play. Trusted by 80% of top mobile brands.","name":"Storemaven | App Store A/B Testing for iOS &amp; Google Play","@id":"https://www.storemaven.com/#schema-49229","isPartOf":{"@id":"https://www.storemaven.com/#webpage"},"publisher":{"@id":"https://www.storemaven.com/#organization"},"image":{"@id":"https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1592237152/Storemaven-vertical-logo-page-dark@2x-8-1.png"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://www.storemaven.com/#webpage"}},{"@type":"VideoObject","name":"Storemaven | App Store A/B Testing for iOS &amp; Google Play","description":"Use Storemaven to A/B test mobile app icons, screenshots, videos, and descriptions on the App Store and Google Play. Trusted by 80% of top mobile brands.","uploadDate":"2020-03-21EET11:12:21+02:00","contentUrl":"https://res.cloudinary.com/storemaven/video/upload/q_90/v1588055061/Storemaven-PHONE.mp4","isFamilyFriendly":"True","@id":"https://www.storemaven.com/#schema-92494","isPartOf":{"@id":"https://www.storemaven.com/#webpage"},"publisher":{"@id":"https://www.storemaven.com/#organization"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://www.storemaven.com/#webpage"}},{"@type":"VideoObject","name":"Storemaven | App Store A/B Testing for iOS &amp; Google Play","description":"Use Storemaven to A/B test mobile app icons, screenshots, videos, and descriptions on the App Store and Google Play. Trusted by 80% of top mobile brands.","uploadDate":"2020-03-21EET11:12:21+02:00","contentUrl":"https://res.cloudinary.com/storemaven/video/upload/q_90/v1591171315/Countdown-full-hd-1.mp4","isFamilyFriendly":"True","@id":"https://www.storemaven.com/#schema-92495","isPartOf":{"@id":"https://www.storemaven.com/#webpage"},"publisher":{"@id":"https://www.storemaven.com/#organization"},"inLanguage":"en-US"},{"@type":"VideoObject","name":"Storemaven | App Store A/B Testing for iOS &amp; Google Play","description":"Use Storemaven to A/B test mobile app icons, screenshots, videos, and descriptions on the App Store and Google Play. Trusted by 80% of top mobile brands.","uploadDate":"2020-03-21EET11:12:21+02:00","contentUrl":"https://res.cloudinary.com/storemaven/video/upload/q_90/v1611688961/storemaven-video-new-1.mp4","isFamilyFriendly":"True","@id":"https://www.storemaven.com/#schema-92496","isPartOf":{"@id":"https://www.storemaven.com/#webpage"},"publisher":{"@id":"https://www.storemaven.com/#organization"},"inLanguage":"en-US"}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='dns-prefetch' href='//www.storemaven.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+
+<link rel="alternate" type="application/rss+xml" title="Storemaven &raquo; Feed" href="https://www.storemaven.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Storemaven &raquo; Comments Feed" href="https://www.storemaven.com/comments/feed/" />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.storemaven.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0.1"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--maven-orange: #f36f46;--wp--preset--color--maven-blue: #9aa9de;--wp--preset--color--maven-text: #21242b;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+
+
+
+
+
+
+
+
+
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js' defer></script>
+<link rel="https://api.w.org/" href="https://www.storemaven.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.storemaven.com/wp-json/wp/v2/pages/2" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.storemaven.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.storemaven.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://www.storemaven.com/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.storemaven.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.storemaven.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.storemaven.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.storemaven.com%2F&#038;format=xml" />
+<!-- Google Tag Manager -->
+        <script type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-K5R2TGB');</script>
+        <!-- End Google Tag Manager --><script type="application/ld+json">{
+            "@context": "http://schema.org",
+            "@type": "Corporation",
+            "name": "Storemaven",
+            "legalName": "Storemaven LTD",
+            "description": "Storemaven creates innovative mobile growth technologies, inventing and innovating app store A/B testing and mobile growth solutions.",
+            "url": "https://www.storemaven.com/",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Israel",
+                "postalCode": "6607737",
+                "streetAddress": "Alfasi St 36, Tel Aviv-Yafo",
+                "addressCountry": {
+                    "@type": "Country",
+                    "name": "IL"
+                }
+            },
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.storemaven.com/wp-content/uploads/2020/09/Storemaven-full-logo-light-1.png"
+            },
+            "sameAs": [
+                "https://www.facebook.com/storemaven/",
+                "https://www.linkedin.com/company/storemaven/",
+                "https://twitter.com/storemaven",
+                "https://www.instagram.com/storemaventlv/"
+            ],
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://www.storemaven.com/"
+            },
+            "@graph": []
+        }</script><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Storemaven - Advanced App Store A/B Testing &amp; ASO">
+<link rel="icon" href="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/w_58,h_58,c_limit/v1590402704/cropped-Storemaven-symbol-on-dark@2x-8.png" sizes="32x32" />
+<link rel="icon" href="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1590402704/cropped-Storemaven-symbol-on-dark@2x-8.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1590402704/cropped-Storemaven-symbol-on-dark@2x-8.png" />
+<meta name="msapplication-TileImage" content="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1590402704/cropped-Storemaven-symbol-on-dark@2x-8.png" />
+		<style type="text/css" id="wp-custom-css">
+			.pum-open  #wrapper-navbar .navbar {
+	top: 66px;
+}
+
+.pum-open body.admin-bar #wrapper-navbar .navbar {
+		top: 98px;
+}
+
+html.pum-open.pum-open-overlay-disabled.pum-open-fixed .pum-container {
+	top: 0;
+}
+
+.pum-theme-default-theme .pum-container {
+	background: linear-gradient(78deg,rgba(243,111,70,.8) 0%,#feaf61 100%) !important;
+}
+
+.pum-theme-default-theme .pum-container .pum-content {
+	line-height: 19px;
+}
+
+.pum-theme-default-theme .pum-container a {
+	color: #000;
+}
+
+.pum-theme-default-theme .pum-content+.pum-close {
+	font-weight: 700 !important;
+	-webkit-appearance: none!important;
+  background: transparent!important; 
+	color: #000!important;
+}
+
+@media only screen and (max-width: 576px) {
+	.pum-open  #wrapper-navbar .navbar {
+	top: 86px;
+}
+	
+	
+.pum-open  body.admin-bar #wrapper-navbar .navbar {
+		top: 130px;
+}
+
+}		</style>
+		
+	<script type="rocketlazyloadscript">
+		document.domain = window.location.hostname;
+	</script>
+
+	<style>
+		/* Lazy Loading fix */
+		video.lozad:not([data-loaded="true"]),
+		img.lozad:not([data-loaded="true"]) {
+			opacity: 0;
+		}
+	</style>
+</head>
+
+<body class="home page-template page-template-page-templates page-template-blank page-template-page-templatesblank-php page page-id-2 wp-custom-logo wp-embed-responsive header--type-light maven-page--homepage group-blog" itemscope itemtype="http://schema.org/WebSite">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.498039215686" /><feFuncG type="table" tableValues="0 0.498039215686" /><feFuncB type="table" tableValues="0 0.498039215686" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.549019607843 0.988235294118" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.717647058824 0.254901960784" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.278431372549" /><feFuncB type="table" tableValues="0.592156862745 0.278431372549" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.647058823529" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.780392156863 1" /><feFuncG type="table" tableValues="0 0.949019607843" /><feFuncB type="table" tableValues="0.352941176471 0.470588235294" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.650980392157 0.403921568627" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.447058823529 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.0980392156863 1" /><feFuncG type="table" tableValues="0 0.662745098039" /><feFuncB type="table" tableValues="0.847058823529 0.419607843137" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5R2TGB"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) --><div class="site" id="page">
+
+	
+	<!-- ******************* The Navbar Area ******************* -->
+	<div id="wrapper-navbar">
+
+		<a class="skip-link sr-only sr-only-focusable" href="#content">Skip to content</a>
+
+		<nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-primary" aria-labelledby="main-nav-label">
+
+			<h2 id="main-nav-label" class="sr-only">
+				Main Navigation			</h2>
+
+		
+					<!-- Your site title as branding in the menu -->
+					
+    <a href="https://www.storemaven.com" class="custom-logo-link active" rel="home">
+        <img width="665" height="180" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1588531994/Storemaven-full-logo-dark.svg" class="img-fluid" alt="Storemaven Logo" />
+    </a>
+
+    <a href="https://www.storemaven.com" class="custom-logo-link alt" rel="home">
+        <img width="665" height="180" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1588531996/Storemaven-full-logo-light.svg" class="img-fluid" alt="Storemaven Logo" />
+    </a>
+
+<!-- end custom logo -->
+
+				
+				<div class="mobile-cta-banner">
+					<a href="/demo" class="mobile-cta-banner-toggler rqst_demo_btn" type="button">
+						Demo					</a>
+
+					<div class="mobile-cta-banner--inner">
+						
+    
+    
+    
+<div class="component-form component-form--short component-form--light" data-form-id="5" data-redirect="">
+        <div role="form" class="wpcf7" id="wpcf7-f5-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f5-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="5" />
+<input type="hidden" name="_wpcf7_version" value="5.6.1" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="0" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</div>
+<p><label><span class="wpcf7-form-control-wrap" data-name="your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="work email" /></span></label><br />
+<span id="wpcf7-63107f6eacfbc-wrapper" class="wpcf7-form-control-wrap department-name-wrap" style="display:none !important; visibility:hidden !important;"><label for="wpcf7-63107f6eacfbc-field" class="hp-message">Please leave this field empty.</label><input id="wpcf7-63107f6eacfbc-field"  class="wpcf7-form-control wpcf7-text" type="text" name="department-name" value="" size="40" tabindex="-1" autocomplete="new-password" /></span><br />
+<input type="submit" value="See it Live" class="wpcf7-form-control has-spinner wpcf7-submit rqst_demo_btn" /></p>
+<input type="hidden" name="lead-source" value="Demo Request" class="wpcf7-form-control wpcf7-hidden" />
+<input type='hidden' class='wpcf7-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' /><div class="wpcf7-response-output" aria-hidden="true"></div><input type="hidden" name="current-post-id" value="2" /></form></div>    
+    
+            <div class="component-form--success" style="display: none;">
+            <h3></h3>
+            <p></p>
+        </div>
+    </div>
+					</div>
+				</div>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<span class="navbar-toggler-icon--inner"></span>
+					</span>
+				</button>
+
+				<div class="mobile-dropdown-wrapper">
+				<!-- The WordPress Menu goes here -->
+				<div id="main-menu-container" class="menu-primary-menu-container"><ul id="main-menu" class="navbar-nav"><li id="menu-item-33358" class="is-new-badge has-left-banner is-product-nav menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-33358 nav-item"><a title="Product" href="https://www.storemaven.com/aso-platform-overview/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-33358"><div class="dropdown-item--inner"><span>Product</span></div></a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-33358" role="menu">
+	<li id="menu-item-33294" class="left-banner menu-item menu-item-type-custom menu-item-object-custom menu-item-33294 nav-item"><a title="ASO Product Page Platform - All you need to create App Store &#038; Google Play product pages that convert and perform at scale.
+Explore the platform" href="/platform-overview/" class="dropdown-item"><div class="dropdown-item--inner"><span>ASO Product<br> Page Platform</span><p>All you need to create App Store &#038; Google Play product pages that convert and perform at scale.
+<button>Explore the platform</button></p></div></a></li>
+	<li id="menu-item-33295" class="is-right-container menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-33295 nav-item"><a title="Right" href="#" class="dropdown-item"><div class="dropdown-item--inner"><span>Right</span></div></a>
+	<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-33358" role="menu">
+		<li id="menu-item-33296" class="is-label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-33296 nav-item"><a title="Plan" href="#" class="dropdown-item"><div class="dropdown-item--inner"><span>Plan</span></div></a>
+		<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-33358" role="menu">
+			<li id="menu-item-33297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33297 nav-item"><a title="Install Funnel Analytics - Identify your top ASO opportunities and plan better product pages" href="https://www.storemaven.com/app-store-install-funnel-analytics/" class="dropdown-item"><div class="dropdown-item--inner"><span>Install Funnel Analytics</span><p>Identify your top ASO opportunities and plan better product pages</p></div></a></li>
+		</ul>
+</li>
+		<li id="menu-item-33298" class="is-label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-33298 nav-item"><a title="Manage" href="#" class="dropdown-item"><div class="dropdown-item--inner"><span>Manage</span></div></a>
+		<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-33358" role="menu">
+			<li id="menu-item-33299" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33299 nav-item"><a title="App Store Management - One command center for your App Store Product Page Management" href="https://www.storemaven.com/app-store-management-automation/" class="dropdown-item"><div class="dropdown-item--inner"><span>App Store Management</span><p>One command center for your App Store Product Page Management</p></div></a></li>
+		</ul>
+</li>
+		<li id="menu-item-33300" class="is-label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-33300 nav-item"><a title="Test" href="#" class="dropdown-item"><div class="dropdown-item--inner"><span>Test</span></div></a>
+		<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-33358" role="menu">
+			<li id="menu-item-33301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33301 nav-item"><a title="Custom Product Page Testing - The only native CPP testing solution" href="https://www.storemaven.com/app-store-product-page-testing/" class="dropdown-item"><div class="dropdown-item--inner"><span>Custom Product Page Testing</span><p>The only native CPP testing solution</p></div></a></li>
+			<li id="menu-item-33302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33302 nav-item"><a title="Product Page A/B Testing - Accurate, in-depth behavioral app store product page tests" href="https://www.storemaven.com/app-store-ab-testing/" class="dropdown-item"><div class="dropdown-item--inner"><span>Product Page A/B Testing</span><p>Accurate, in-depth behavioral app store product page tests</p></div></a></li>
+		</ul>
+</li>
+		<li id="menu-item-33303" class="is-label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-33303 nav-item"><a title="Analyze" href="#" class="dropdown-item"><div class="dropdown-item--inner"><span>Analyze</span></div></a>
+		<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-33358" role="menu">
+			<li id="menu-item-33304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33304 nav-item"><a title="ASO Monitoring &amp; Reporting - Use App Store Analytics to Analyze, monitor &#038; report on your product pages" href="https://www.storemaven.com/app-store-analytics-monitoring/" class="dropdown-item"><div class="dropdown-item--inner"><span>ASO Monitoring &#038; Reporting</span><p>Use App Store Analytics to Analyze, monitor &#038; report on your product pages</p></div></a></li>
+		</ul>
+</li>
+		<li id="menu-item-33305" class="is-label menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-33305 nav-item"><a title="Data" href="#" class="dropdown-item"><div class="dropdown-item--inner"><span>Data</span></div></a>
+		<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-33358" role="menu">
+			<li id="menu-item-33306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33306 nav-item"><a title="App Store Data Feed - Unlock your mobile marketing data from App Store Connect" href="https://www.storemaven.com/app-store-data-feed/" class="dropdown-item"><div class="dropdown-item--inner"><span>App Store Data Feed</span><p>Unlock your mobile marketing data from App Store Connect</p></div></a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-33307" class="layout-flex menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-33307 nav-item"><a title="Services" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-33307"><div class="dropdown-item--inner"><span>Services</span></div></a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-33307" role="menu">
+	<li id="menu-item-33308" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33308 nav-item"><a title="ASO Consulting - World-class ASO consultancy &#038; management for your App Store needs" href="https://www.storemaven.com/aso-consultancy/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1635270291/consultancy_line-2.svg" /></figure><div class="dropdown-item--inner"><span>ASO Consulting</span><p>World-class ASO consultancy &#038; management for your App Store needs</p></div></a></li>
+	<li id="menu-item-33309" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33309 nav-item"><a title="Generate beautiful and smart product page creative briefs" href="https://www.storemaven.com/app-store-product-page-planning/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1635270255/Testing_line-1.svg" /></figure><div class="dropdown-item--inner"><span>Product Page Planning</span><p>Generate beautiful and smart product page creative briefs</p></div></a></li>
+	<li id="menu-item-33310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33310 nav-item"><a title="Get data-driven, converting, and beautiful App Store creatives" href="https://www.storemaven.com/app-store-creative-studio/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934616/Tool_Box_line.svg" /></figure><div class="dropdown-item--inner"><span>Creative Studio</span><p>Get data-driven, converting, and beautiful App Store creatives</p></div></a></li>
+</ul>
+</li>
+<li id="menu-item-4457" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-4457 nav-item"><a title="Solutions" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-4457"><div class="dropdown-item--inner"><span>Solutions</span></div></a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-4457" role="menu">
+	<li id="menu-item-4460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4460 nav-item"><a title="Drive more organic conversion rates" href="https://www.storemaven.com/mobile-organic-growth/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934609/organic-growth-copy-5.svg" /></figure><div class="dropdown-item--inner"><span>Organic Growth</span><p>Drive more organic conversion rates</p></div></a></li>
+	<li id="menu-item-4459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4459 nav-item"><a title="Paid growth puts more eyes on your app" href="https://www.storemaven.com/paid-mobile-growth-aso/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934610/paid.svg" /></figure><div class="dropdown-item--inner"><span>Paid Growth</span><p>Paid growth puts more eyes on your app</p></div></a></li>
+	<li id="menu-item-4461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4461 nav-item"><a title="Taking ASO way beyond Google Experiments" href="https://www.storemaven.com/google-play-aso-experiments/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934607/google-experiment_2.svg" /></figure><div class="dropdown-item--inner"><span>Google Experiments</span><p>Taking ASO way beyond Google Experiments</p></div></a></li>
+	<li id="menu-item-4458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4458 nav-item"><a title="Be ready for launch with a thorough testing strategy" href="https://www.storemaven.com/prelaunch-testing/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934613/prelounch-copy-2.svg" /></figure><div class="dropdown-item--inner"><span>Prelaunch Testing</span><p>Be ready for launch with a thorough testing strategy</p></div></a></li>
+	<li id="menu-item-4462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4462 nav-item"><a title="Maximize your app’s potential prelaunch" href="https://www.storemaven.com/mobile-app-concept-testing/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934604/concept_3-copy.svg" /></figure><div class="dropdown-item--inner"><span>Concept Testing</span><p>Maximize your app’s potential prelaunch</p></div></a></li>
+	<li id="menu-item-1859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1859 nav-item"><a title="The only ASO Chrome extension you’ll ever need" href="https://www.storemaven.com/aso-tool-box/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934616/Tool_Box_line.svg" /></figure><div class="dropdown-item--inner"><span>ASO Tool Box</span><p>The only ASO Chrome extension you’ll ever need</p></div></a></li>
+</ul>
+</li>
+<li id="menu-item-26028" class="has-left-banner menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-26028 nav-item"><a href="https://www.storemaven.com/academy/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-26028"><div class="dropdown-item--inner"><span>ASO Academy</span></div></a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-26028" role="menu">
+	<li id="menu-item-26027" class="left-banner menu-item menu-item-type-custom menu-item-object-custom menu-item-26027 nav-item"><a title="The Storemaven Academy - Learning hub. Mobile Growth Toolkit. ASO Backpack. Whatever you want to call it, to grow in the app store. These are the resources you need in your life
+Explore the library ⟶" href="/academy/" class="dropdown-item"><div class="dropdown-item--inner"><span>The Storemaven Academy</span><p>Learning hub. Mobile Growth Toolkit. ASO Backpack. Whatever you want to call it, to grow in the app store. These are the resources you need in your life
+<button>Explore the library ⟶</button></p></div></a></li>
+<li class="mega-menu-container"><ul>	<li id="menu-item-26057" class="mega-menu-inner-start menu-item menu-item-type-taxonomy menu-item-object-format menu-item-26057 nav-item"><a title="Practical action pieces for ASO and Mobile Growth from Storemaven experts" href="https://www.storemaven.com/academy/format/aso-guides/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934600/ASO-guide-Copy.svg" /></figure><div class="dropdown-item--inner"><span>ASO Guides</span><p>Practical action pieces for ASO and Mobile Growth from Storemaven experts</p></div></a></li>
+	<li id="menu-item-26243" class="menu-item menu-item-type-taxonomy menu-item-object-format menu-item-26243 nav-item"><a title="From App Store category drilldowns to must-know industry changes" href="https://www.storemaven.com/academy/format/aso-blog/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934596/ASO-blog.svg" /></figure><div class="dropdown-item--inner"><span>ASO Blog</span><p>From App Store category drilldowns to must-know industry changes</p></div></a></li>
+	<li id="menu-item-26060" class="menu-item menu-item-type-taxonomy menu-item-object-format menu-item-26060 nav-item"><a title="Mavens like knowledge sharing. We run webinars on hot topics regularly" href="https://www.storemaven.com/academy/format/aso-webinars/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934603/ASO-webinar-Copy.svg" /></figure><div class="dropdown-item--inner"><span>Mobile Growth Webinars</span><p>Mavens like knowledge sharing. We run webinars on hot topics regularly</p></div></a></li>
+	<li id="menu-item-26059" class="menu-item menu-item-type-taxonomy menu-item-object-format menu-item-26059 nav-item"><a title="Eyes tired? So start listening. Here we chat with guests about, duh, mobile growth" href="https://www.storemaven.com/academy/format/podcast/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1632836559/ASO-podcast-Copy.svg" /></figure><div class="dropdown-item--inner"><span>Mobile Growth Podcast</span><p>Eyes tired? So start listening. Here we chat with guests about, duh, mobile growth</p></div></a></li>
+	<li id="menu-item-26058" class="menu-item menu-item-type-taxonomy menu-item-object-format menu-item-26058 nav-item"><a title="eBooks &amp; Frameworks - Our publications are snackable, informative, and potentially Pulitzer prize-winning" href="https://www.storemaven.com/academy/format/aso-ebooks-frameworks/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934597/ASO-e-book-Copy-2.svg" /></figure><div class="dropdown-item--inner"><span>eBooks &#038; Frameworks</span><p>Our publications are snackable, informative, and potentially Pulitzer prize-winning</p></div></a></li>
+	<li id="menu-item-1860" class="mega-menu-inner-end menu-item menu-item-type-post_type menu-item-object-page menu-item-1860 nav-item"><a title="Glossary - Get back to basics. Understand industry buzzwords in layman’s terms" href="https://www.storemaven.com/aso-glossary/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934598/ASO-glossary-Copy.svg" /></figure><div class="dropdown-item--inner"><span>Glossary</span><p>Get back to basics. Understand industry buzzwords in layman’s terms</p></div></a></ul></li></li>
+</ul>
+</li>
+<li id="menu-item-28949" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28949 nav-item"><a title="iOS 15 Hub" href="/academy/topic/ios-15/" class="nav-link"><div class="dropdown-item--inner"><span>iOS 15 Hub</span></div></a></li>
+<li id="menu-item-5468" class="layout-flex menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-5468 nav-item"><a title="Company" href="https://www.storemaven.com/about-us/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-5468"><div class="dropdown-item--inner"><span>Company</span></div></a>
+<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-5468" role="menu">
+	<li id="menu-item-26061" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26061 nav-item"><a title="Our Mavens make up a mix of engineers, data storytellers, and ASO consultants that deliver data-backed solutions to drive mobile growth" href="https://www.storemaven.com/about-us/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934595/about-us.svg" /></figure><div class="dropdown-item--inner"><span>About Us</span><p>Our Mavens make up a mix of engineers, data storytellers, and ASO consultants that deliver data-backed solutions to drive mobile growth</p></div></a></li>
+	<li id="menu-item-1728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1728 nav-item"><a title="With years of App Store expertise and knowledge, we’re the best at understanding the mobile growth industry. Learn more" href="https://www.storemaven.com/why-storemaven-aso/" class="dropdown-item"><figure><img src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618934618/why-storemaven.svg" /></figure><div class="dropdown-item--inner"><span>Why Storemaven</span><p>With years of App Store expertise and knowledge, we’re the best at understanding the mobile growth industry. Learn more</p></div></a></li>
+</ul>
+</li>
+<li id="menu-item-963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-963 nav-item"><a href="https://www.storemaven.com/clients/" class="nav-link"><div class="dropdown-item--inner"><span>Clients</span></div></a></li>
+<li id="menu-item-1864" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1864 nav-item"><a title="Careers" target="_blank" rel="noopener noreferrer" href="https://jobsimulator.unboxable.com/storemaven.com/all-positions" class="nav-link"><div class="dropdown-item--inner"><span>Careers</span></div></a></li>
+</ul></div>                
+				<div id="header-right-menu-container" class="menu-header-right-menu-container"><ul id="header-right-menu" class="navbar-nav"><li id="menu-item-117" class="header-login-btn menu-item menu-item-type-custom menu-item-object-custom menu-item-117 nav-item"><a title="Log in" href="/login/" class="nav-link">Log in</a></li>
+<li id="menu-item-3313" class="header-demo-btn menu-item menu-item-type-post_type menu-item-object-page menu-item-3313 nav-item"><a title="See it Live" href="https://www.storemaven.com/demo/" class="nav-link rqst_demo_btn">See it Live</a></li>
+</ul></div>				</div>
+
+			
+			
+			
+		</nav><!-- .site-navigation -->
+
+	</div><!-- #wrapper-navbar end -->
+
+	
+<div class="wrapper" id="page-wrapper">
+	<div class="container-fluid" id="content" tabindex="-1">
+		<div class="row">
+			<main class="site-main" id="main">
+
+									
+<div class="wp-container-1 wp-block-group maven-block"><div class="wp-block-group__inner-container">
+<div class="maven-block maven-block_hero page-home__hero maven-block_hero--lg maven-block_hero--text-light">
+    <div class="maven-block_hero__inner">
+        <div class="maven-block_hero--contents">
+            <div class="maven-block_hero--text">
+                                
+<div class="component-text maven-block_hero--badge" data-text="">
+    </div>                
+                                
+<h2 class="component-title maven-block_hero--small">
+    </h2>                
+                
+<h1 class="component-title ">
+    Get more installs with highly converting app store product pages
+</h1>
+                                
+<div class="component-text " data-text="Stop losing traffic and show the right message to your audiences. A/B test icons, screenshots, and videos on the App Store and Google Play.
+">
+    <p><span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Stop losing 70% of your traffic and start creating the right product page for the right audience&quot;}" data-sheets-userformat="{&quot;2&quot;:8961,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0,&quot;16&quot;:9}">Stop losing traffic and show the right message to your audiences. A/B test icons, screenshots, and videos on the App Store and Google Play.</span></p>
+</div>                
+                                    
+<div class="component-form component-form--short component-form--light" data-form-id="5" data-redirect="{&quot;enabled&quot;:true,&quot;to&quot;:&quot;\/thank-you-demo\/&quot;,&quot;target&quot;:&quot;_self&quot;}">
+        <div role="form" class="wpcf7" id="wpcf7-f5-p2-o2" lang="en-US" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f5-p2-o2" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="5" />
+<input type="hidden" name="_wpcf7_version" value="5.6.1" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-p2-o2" />
+<input type="hidden" name="_wpcf7_container_post" value="2" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</div>
+<p><label><span class="wpcf7-form-control-wrap" data-name="your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="work email" /></span></label><br />
+<span id="wpcf7-63107f6ee915e-wrapper" class="wpcf7-form-control-wrap department-name-wrap" style="display:none !important; visibility:hidden !important;"><label for="wpcf7-63107f6ee915e-field" class="hp-message">Please leave this field empty.</label><input id="wpcf7-63107f6ee915e-field"  class="wpcf7-form-control wpcf7-text" type="text" name="department-name" value="" size="40" tabindex="-1" autocomplete="new-password" /></span><br />
+<input type="submit" value="See it Live" class="wpcf7-form-control has-spinner wpcf7-submit rqst_demo_btn" /></p>
+<input type="hidden" name="lead-source" value="Demo Request" class="wpcf7-form-control wpcf7-hidden" />
+<input type='hidden' class='wpcf7-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' /><div class="wpcf7-response-output" aria-hidden="true"></div><input type="hidden" name="current-post-id" value="2" /></form></div>    
+    
+    </div>
+                            </div>
+            
+            
+                    </div>
+
+                <div class="maven-block_hero--background">
+                            
+<div class="component-background-video">
+    <div class="component-background-video--desktop">
+        
+<figure class="component-video video">
+    <video class="component-video__video lozad " muted autoplay loop playsinline  >
+        <source data-src="https://res.cloudinary.com/storemaven/video/upload/q_90/v1588055061/Storemaven-PHONE.mp4" type="video/mp4">
+    </video>
+</figure>    </div>
+
+    <div class="component-background-video--mobile">
+        
+<figure class="component-video video">
+    <video class="component-video__video lozad " muted autoplay loop playsinline  >
+        <source data-src="https://res.cloudinary.com/storemaven/video/upload/q_90/v1588055061/Storemaven-PHONE.mp4" type="video/mp4">
+    </video>
+</figure>    </div>
+</div>                    </div>
+            </div>
+</div>
+
+
+<div class="maven-block maven-block_logos-strip page-home__logos-strip">
+    <div class="maven-block_logos-strip__inner">
+    
+        
+<div class="component-images-gallery">
+    <div class="component-images-gallery__inner">
+                <strong>Trusted <br>By</strong>
+        
+        
+<figure class="component-image image">
+    <img class="" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1587901809/yahoo.png" alt="Homepage - 1" title="Homepage 1">
+</figure>
+<figure class="component-image image">
+    <img class="" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1587901809/kabam.png" alt="Homepage - 2" title="Homepage 2">
+</figure>
+<figure class="component-image image">
+    <img class="" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1593684974/zynga-logo-1.png" alt="Homepage - 3" title="Homepage 3">
+</figure>
+<figure class="component-image image">
+    <img class="" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1587901811/warner.png" alt="Homepage - 4" title="Homepage 4">
+</figure>
+<figure class="component-image image">
+    <img class="" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1587901812/hbo.png" alt="Homepage - 5" title="Homepage 5">
+</figure>
+<figure class="component-image image">
+    <img class="" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1587901811/tiktok.png" alt="Homepage - 6" title="Homepage 6">
+</figure>
+<figure class="component-image image">
+    <img class="" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1591462082/uber-logo.png" alt="Homepage - 7" title="Homepage 7">
+</figure>    </div>
+</div>    </div>
+</div></div></div>
+
+
+
+<div class="maven-block maven-block_fading-content page-home__counter-content">
+    <div class="maven-block_fading-content__inner">
+        <div class="maven-block_fading-content__inner--step-one">
+            
+<div class="component-background-video">
+    <div class="component-background-video--desktop">
+        
+<figure class="component-video video">
+    <video class="component-video__video lozad " muted autoplay loop playsinline  >
+        <source data-src="https://res.cloudinary.com/storemaven/video/upload/q_90/v1591171315/Countdown-full-hd-1.mp4" type="video/mp4">
+    </video>
+</figure>    </div>
+
+    <div class="component-background-video--mobile">
+        
+<figure class="component-video video">
+    <video class="component-video__video lozad " muted autoplay loop playsinline  >
+        <source data-src="https://res.cloudinary.com/storemaven/video/upload/q_90/v1591171315/Countdown-full-hd-1.mp4" type="video/mp4">
+    </video>
+</figure>    </div>
+</div>            
+<strong class="component-title ">
+    In just 3 seconds
+</strong>            
+<h2 class="component-title ">
+    <strong>70% of users drop</strong><br />
+from your app store page
+</h2>        </div>
+
+        <div class="maven-block_fading-content__inner--step-two">
+            
+<h2 class="component-title ">
+    <strong>That was it. Poof.</strong><br />
+You’ve already lost them.
+</h2>            
+<div class="component-text " data-text="We’re interested in finding out not just what converts but why it does.
+Everyone sees your app store page, make sure it does what it should.
+">
+    <p>We’re interested in finding out not just what converts but why it does.<br />
+Everyone sees your app store page, make sure it does what it should.</p>
+</div>            
+<strong class="component-title ">
+    Make sure it converts.
+</strong>        </div>
+    </div>
+</div>
+
+
+<div class="maven-block maven-block_double_benefit page-home__paid_organic">
+    <div class="maven-block_double_benefit__content">
+        <div class="maven-block_double_benefit__content--left">
+            
+<div class="component-benefit component-benefit-normal">
+
+    
+    
+    
+    
+    <div class="component-benefit-content">
+        
+<strong class="component-title ">
+    Paid
+</strong>        
+<div class="component-text " data-text="The user journey doesn’t stop with a tap on an ad. The app store is a crucial part of converting paid installs. Fight ever-increasing cost per installs (CPIs), increase your return on ad spend (ROAS) and hit your targets.
+">
+    <p>The user journey doesn’t stop with a tap on an ad. The app store is a crucial part of converting paid installs. Fight ever-increasing cost per installs (CPIs), increase your return on ad spend (ROAS) and hit your targets.</p>
+</div>        
+<h3 class="component-title ">
+    <strong>It’s time to optimize</strong> the<br />
+only unoptimized step of<br />
+your paid funnel
+</h3>    </div>
+
+    
+    </div>
+        </div>
+
+        <div class="maven-block_double_benefit__content--right">
+            
+<div class="component-benefit component-benefit-normal">
+
+    
+    
+    
+    
+    <div class="component-benefit-content">
+        
+<strong class="component-title ">
+    Organic
+</strong>        
+<div class="component-text " data-text="Learn which messages drive the highest conversions for Browse &amp; Search traffic. Implement a powerful organic user acquisition process that works. It’s time to grow where growth is hard.
+">
+    <p>Learn which messages drive the highest conversions for Browse &amp; Search traffic. Implement a powerful organic user acquisition process that works. It’s time to grow where growth is hard.</p>
+</div>        
+<h3 class="component-title ">
+    <strong>85% of all installs are </strong><br />
+<strong>organics</strong>, give them the<br />
+attention they deserve
+</h3>    </div>
+
+    
+    </div>
+        </div>
+    </div>
+
+        <div class="maven-block_double_benefit__parallax">
+        
+            <figure class="maven-block_double_benefit__parallax--piece" >
+                
+<figure class="component-image image">
+    <img class="lozad" 
+         data-src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1591171374/hompage-phone-1.png"
+          />
+</figure>            </figure>
+
+        
+            <figure class="maven-block_double_benefit__parallax--piece" data-parllax-id="1">
+                
+<figure class="component-image image">
+    <img class="lozad" 
+         data-src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1591171363/orange-boxes-1.png"
+          />
+</figure>            </figure>
+
+            </div>
+    
+    <div class="maven-block_double_benefit__background">
+        
+<div class="component-background-image">
+    <div class="component-background-image--desktop">
+        
+<figure class="component-image image">
+    <img class="" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1589374875/paid-organic-asset-1-2.png" alt="Homepage - 8" title="Homepage 8">
+</figure>    </div>
+
+    <div class="component-background-image--mobile">
+        
+<figure class="component-image image">
+    <img class="" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1589371820/paid-organic-asset-1-1.png" alt="Homepage - 9" title="Homepage 9">
+</figure>    </div>
+</div>    </div>
+</div>
+
+
+<div class="maven-block maven-block_benefit page-home__benefit-single maven-block_benefit--small">
+
+    
+    
+        <div class="maven-block_benefit__item">
+        
+<div class="component-benefit component-benefit-normal">
+
+    
+    
+    
+    
+    <div class="component-benefit-content">
+        
+<h2 class="component-title ">
+    Know your users better than<br />
+they know themselves
+</h2>        
+<div class="component-text " data-text="Gain intimate insights into the road to install and
+let those learnings feed your overall marketing efforts.
+The more you know the better your strategy.
+">
+    <p>Gain intimate insights into the road to install and<br />
+let those learnings feed your overall marketing efforts.</p>
+<p><strong>The more you know the better your strategy.</strong></p>
+</div>        
+<h2 class="component-title ">
+    </h2>    </div>
+
+    
+    </div>
+    </div>
+    
+        <div class="maven-block_benefit__background">
+        
+<div class="component-background-image">
+    <div class="component-background-image--desktop">
+        
+<figure class="component-image image">
+    <img class="" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1591519584/spiral-2-1.png" alt="Homepage - 10" title="Homepage 10">
+</figure>    </div>
+
+    <div class="component-background-image--mobile">
+        
+<figure class="component-image image">
+    <img class="" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1591519584/spiral-2-1.png" alt="Homepage - 10" title="Homepage 10">
+</figure>    </div>
+</div>    </div>
+    </div>
+
+
+<div class="maven-block maven-block_benefit page-home__benefit-image-right maven-block_benefit--small">
+
+    
+    
+        <div class="maven-block_benefit__item">
+        
+<div class="component-benefit component-benefit-reversed">
+
+    
+    
+    <div class="component-benefit-image--desktop">
+        
+<figure class="component-image image">
+    <img class="lozad" 
+         data-src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1588680469/Cards-Asset-2.png"
+          />
+</figure>    </div>
+
+    <div class="component-benefit-image--mobile">
+        
+<figure class="component-image image">
+    <img class="lozad" 
+         data-src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1588680469/Cards-Asset-2.png"
+          />
+</figure>    </div>
+
+    
+    
+    
+    <div class="component-benefit-content">
+        
+<h2 class="component-title ">
+    <strong>Haven’t launched yet?</strong><br />
+Get conversion rate data<br />
+before you even do
+</h2>        
+<div class="component-text " data-text="Ensure a successful app launch by discovering what drives users, with concept and prelaunch testing.
+Make decisions based on real data from the get-go.
+">
+    <p>Ensure a successful app launch by discovering what drives users, with concept and prelaunch testing.<br />
+<strong>Make decisions based on real data from the get-go.</strong></p>
+</div>        
+<h2 class="component-title ">
+    </h2>    </div>
+
+    
+    </div>
+    </div>
+    
+    </div>
+
+
+<div class="maven-block maven-block_cta_bar style-- size--">
+    <div class="maven-block_cta_bar__inner">
+        
+<h2 class="component-title ">
+    Give your app a running start
+</h2>
+        
+<div class="component-text " data-text="">
+    </div>
+        
+<div class="component-form component-form--short component-form--dark" data-form-id="5" data-redirect="">
+        <div role="form" class="wpcf7" id="wpcf7-f5-p2-o3" lang="en-US" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f5-p2-o3" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="5" />
+<input type="hidden" name="_wpcf7_version" value="5.6.1" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-p2-o3" />
+<input type="hidden" name="_wpcf7_container_post" value="2" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</div>
+<p><label><span class="wpcf7-form-control-wrap" data-name="your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="work email" /></span></label><br />
+<span id="wpcf7-63107f6f0f3af-wrapper" class="wpcf7-form-control-wrap department-name-wrap" style="display:none !important; visibility:hidden !important;"><label for="wpcf7-63107f6f0f3af-field" class="hp-message">Please leave this field empty.</label><input id="wpcf7-63107f6f0f3af-field"  class="wpcf7-form-control wpcf7-text" type="text" name="department-name" value="" size="40" tabindex="-1" autocomplete="new-password" /></span><br />
+<input type="submit" value="See it Live" class="wpcf7-form-control has-spinner wpcf7-submit rqst_demo_btn" /></p>
+<input type="hidden" name="lead-source" value="Demo Request" class="wpcf7-form-control wpcf7-hidden" />
+<input type='hidden' class='wpcf7-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' /><div class="wpcf7-response-output" aria-hidden="true"></div><input type="hidden" name="current-post-id" value="2" /></form></div>    
+    
+            <div class="component-form--success" style="display: none;">
+            <h3></h3>
+            <p></p>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="maven-block maven-block_progressing_content page-home__progressing_content">
+    <div class="maven-block maven-block_progressing_content__inner">
+        
+<h2 class="component-title ">
+    Start driving results<br />
+with Storemaven
+</h2>
+                
+<div class="component-progress-content-item is-active" data-key="0">
+    <div class="component-progress-content-item__content">
+        
+<h3 class="component-title ">
+    Expert technology
+</h3>        
+<div class="component-text " data-text="Save money and gain more
+avenues for analysis with our
+proprietary predictive Bayesian
+algorithm, StoreIQ.
+">
+    <p><span style="font-weight: 400;">Save money and gain more<br />
+avenues for analysis with our<br />
+proprietary </span><span style="font-weight: 400;">predictive Bayesian<br />
+algorithm, </span><span style="font-weight: 400;">StoreIQ.</span></p>
+</div>    </div>
+</div>
+                
+<div class="component-progress-content-item " data-key="1">
+    <div class="component-progress-content-item__content">
+        
+<h3 class="component-title ">
+    Expert Team
+</h3>        
+<div class="component-text " data-text="Since the app stores’ inception, our team
+has been perfecting app store testing to
+inform app store optimization strategy
+and help you achieve the highest possible
+conversion rates.
+">
+    <p><span style="font-weight: 400;">Since the app stores’ inception, our team<br />
+has been perfecting app store testing to<br />
+inform <a href="https://www.storemaven.com/academy/app-store-optimization-guide/">app store optimization</a> strategy<br />
+and help you achieve the highest possible<br />
+conversion rates.</span></p>
+</div>    </div>
+</div>
+                
+<div class="component-progress-content-item " data-key="2">
+    <div class="component-progress-content-item__content">
+        
+<h3 class="component-title ">
+    Actionable Insights
+</h3>        
+<div class="component-text " data-text="Testing is not just about finding a
+winning variation, it’s about
+discovering insights that can drive
+strategy across your entire mobile
+marketing funnel.
+">
+    <p><span style="font-weight: 400;">Testing is not just about finding a<br />
+winning variation, it’s about<br />
+discovering insights that can drive<br />
+strategy across your entire mobile<br />
+marketing funnel.</span></p>
+</div>    </div>
+</div>
+        
+        <div class="maven-block_progressing_content__inner--progress-bar">
+                            <span class="progress-bar is-active" data-key="0">
+                    <span class="progress-bar__inner" style="width: 0%;"></span>
+                </span>
+                            <span class="progress-bar " data-key="1">
+                    <span class="progress-bar__inner" style="width: 0%;"></span>
+                </span>
+                            <span class="progress-bar " data-key="2">
+                    <span class="progress-bar__inner" style="width: 0%;"></span>
+                </span>
+                    </div>
+
+        
+<div class="component-background-video">
+    <div class="component-background-video--desktop">
+        
+<figure class="component-video video">
+    <video class="component-video__video lozad " muted loop playsinline  >
+        <source data-src="https://res.cloudinary.com/storemaven/video/upload/q_90/v1611688961/storemaven-video-new-1.mp4" type="video/mp4">
+    </video>
+</figure>    </div>
+
+    <div class="component-background-video--mobile">
+        
+<figure class="component-video video">
+    <video class="component-video__video lozad " muted loop playsinline  >
+        <source data-src="https://res.cloudinary.com/storemaven/video/upload/q_90/v1611688961/storemaven-video-new-1.mp4" type="video/mp4">
+    </video>
+</figure>    </div>
+</div>    </div>
+</div>
+
+
+<div class="maven-block maven-block_use-cases-gallery ">
+    <div class="maven-block_use-cases-gallery__inner">
+        
+<h2 class="component-title ">
+    Storemaven powers mobile marketers to:
+</h2>
+        <div class="maven-block_use-cases-gallery__items">
+        
+<div class="component-use-case-item">
+    <a href="/mobile-organic-growth/" class="component-use-case-item_inner">
+        <figure class="component-use-case-item--icon">
+            <img class="lozad" data-src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1591172625/discoverability-art.png" alt="" />
+        </figure>
+        
+        <div class="component-use-case-item--name">
+            
+<h2 class="component-title ">
+    Improve apps and games organic growth
+</h2>        </div>
+    </a>
+</div>
+<div class="component-use-case-item">
+    <a href="/paid-mobile-growth-aso/" class="component-use-case-item_inner">
+        <figure class="component-use-case-item--icon">
+            <img class="lozad" data-src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1618892357/app-store-optimization-art.png" alt="" />
+        </figure>
+        
+        <div class="component-use-case-item--name">
+            
+<h2 class="component-title ">
+    Improve apps and games paid growth
+</h2>        </div>
+    </a>
+</div>
+<div class="component-use-case-item">
+    <a href="/google-play-aso-experiments/" class="component-use-case-item_inner">
+        <figure class="component-use-case-item--icon">
+            <img class="lozad" data-src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1591172516/app-store-testing-art.png" alt="" />
+        </figure>
+        
+        <div class="component-use-case-item--name">
+            
+<h2 class="component-title ">
+    Enhance Google Experiments
+</h2>        </div>
+    </a>
+</div>
+<div class="component-use-case-item">
+    <a href="/mobile-app-concept-testing/" class="component-use-case-item_inner">
+        <figure class="component-use-case-item--icon">
+            <img class="lozad" data-src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1591172583/creative-optimization-art.png" alt="" />
+        </figure>
+        
+        <div class="component-use-case-item--name">
+            
+<h2 class="component-title ">
+    Run apps and games<br />
+concept tests
+</h2>        </div>
+    </a>
+</div>
+<div class="component-use-case-item">
+    <a href="/prelaunch-testing/" class="component-use-case-item_inner">
+        <figure class="component-use-case-item--icon">
+            <img class="lozad" data-src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1591172765/user-acquisition-art.png" alt="" />
+        </figure>
+        
+        <div class="component-use-case-item--name">
+            
+<h2 class="component-title ">
+    Optimize apps and games<br />
+prelaunch
+</h2>        </div>
+    </a>
+</div>        </div>
+    </div>
+</div>
+
+
+<div class="maven-block maven-block_testimonials page-home__testimonials">
+    <div class="maven-block_testimonials__inner">
+                
+<h2 class="component-title ">
+    Hear it straight from those who know
+</h2>                
+        <div class="maven-block_testimonials__content" data-is-slider="false">
+        
+<div class="component-testimonial">
+    <div class="component-testimonial_image">
+        
+<figure class="component-image image">
+    <img class="lozad" 
+         data-src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1591123006/Untitled-design-9.png"
+          
+         alt="Vanessa Rouhani, SVP of Publishing,  Jam City"
+          />
+</figure>    </div>
+
+    <div class="component-testimonial_content">
+    <blockquote class="component-text">
+    <p><span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;StoreMaven is an integral component of our user acquisition strategy. They have become an extension of our team and have helped bring our products to life from early concept to growth and maturity. We rely on their team of consultants to offer invaluable insights that enable us to maximize app performance and continue progressing and evolving with the mobile industry. Their intelligent platform, coupled with constant innovation and strategic analyses from the StoreMaven team, have helped us increase the quality of our app installs and boost app growth.&quot;}" data-sheets-userformat="{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}">Storemaven has become an extension of our team and they have helped bring our products to life from early concept to growth and maturity.</span></p>
+<p>The intelligent platform, coupled with constant innovation and strategic analyses from the team, has helped us increase the quality of our app installs and boost app growth.</p>
+</blockquote>
+
+<cite class="component-cite">
+    Vanessa Rouhani, SVP of Publishing,  Jam City</cite>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="maven-block maven-block_featured_content page-home__academy">
+    <div class="maven-block_featured_content__inner">
+                
+<h2 class="component-title ">
+    The only data-backed ASO academy
+</h2>        
+        <div class="maven-block_featured_content__items">
+            
+<div class="component-content-pieces-grid">
+    <div class="component-content-pieces-grid__inner component-content-pieces-grid__inner--layout-grid-1-3">
+        
+        
+        
+<a href="https://www.storemaven.com/mobile-growth-conference-2021-recap/" class="component-content-piece">
+    <div class="component-content-piece_image">
+        
+<figure class="component-image image">
+    <img class="lozad" 
+         data-src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/w_388,h_230,c_fill/v1635328472/The_recap_smallcover1.png"
+[O          />
+</figure>
+            </div>
+
+    <div class="component-content-piece_content">
+                <span class="component-content-piece_content--tax">
+            
+<span class="component-title ">
+    iOS 15 Hub</span>        </span>
+        
+        <span class="component-content-piece_content--title">
+        
+<h4 class="component-title ">
+    That&#8217;s the Tea on Mobile Growth 2021: The Conference Recap</h4>        </span>
+
+        <div class="component-content-piece_content--excerpt">
+        
+<div class="component-text " data-text="Eight Inspiring sessions with top mobile marketing experts and all the answers you need to cope with one of the&hellip;">
+    Eight Inspiring sessions with top mobile marketing experts and all the answers you need to cope with one of the&hellip;</div>        </div>
+
+            </div>
+</a>
+
+        
+        
+        
+        
+        
+<a href="https://www.storemaven.com/academy/app-store-optimization-guide/" class="component-content-piece">
+    <div class="component-content-piece_image">
+        
+<figure class="component-image image">
+    <img class="lozad" 
+         data-src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/w_388,h_230,c_fill/v1596560406/Small-Cover_ASO_Guide.png"
+          
+         alt="Small_cover_aso_guide_2020"
+          />
+</figure>
+            </div>
+
+    <div class="component-content-piece_content">
+                <span class="component-content-piece_content--tax">
+            
+<span class="component-title ">
+    App Store page asset optimization</span>        </span>
+        
+        <span class="component-content-piece_content--title">
+        
+<h4 class="component-title ">
+    The Complete App Store Optimization (ASO) Guide (2022)</h4>        </span>
+
+        <div class="component-content-piece_content--excerpt">
+        
+<div class="component-text " data-text="You can't underestimate ASO's place in your company's marketing strategy. A well performed ASO strategy will help you reach your&hellip;">
+    You can&#8217;t underestimate ASO&#8217;s place in your company&#8217;s marketing strategy. A well performed ASO strategy will help you reach your&hellip;</div>        </div>
+
+            </div>
+</a>
+
+        
+        
+        
+        
+        
+<a href="https://www.storemaven.com/category-spotlight-food-and-drink-apps/" class="component-content-piece">
+    <div class="component-content-piece_image">
+        
+<figure class="component-image image">
+    <img class="lozad" 
+         data-src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/w_388,h_230,c_fill/v1624947330/Food_and_Drink_small1.png"
+          />
+</figure>
+            </div>
+
+    <div class="component-content-piece_content">
+                <span class="component-content-piece_content--tax">
+            
+<span class="component-title ">
+    Category Analyses</span>        </span>
+        
+        <span class="component-content-piece_content--title">
+        
+<h4 class="component-title ">
+    ASO App Store Category Spotlight: Food and Drink Apps</h4>        </span>
+
+        <div class="component-content-piece_content--excerpt">
+        
+<div class="component-text " data-text="For our eighth installment in our category spotlight series, we're taking on the 25 top-grossing apps in the Food and&hellip;">
+    For our eighth installment in our category spotlight series, we&#8217;re taking on the 25 top-grossing apps in the Food and&hellip;</div>        </div>
+
+            </div>
+</a>
+
+        
+        
+            </div>
+</div>        </div>
+
+                <div class="maven-block_featured_content__footer">
+            
+<div class="component-button">
+    <a href="/academy/" target="_self" class="component-button__inner btn btn-primary">
+    Visit the full ASO Academy    </a>
+</div>        </div>
+            </div>
+</div>
+
+
+<div class="maven-block maven-block_cta_bar page-home__footer-cta style--orange size--large">
+    <div class="maven-block_cta_bar__inner">
+        
+<h2 class="component-title ">
+    Ready to see our platform in action?<br />
+Request a demo
+</h2>
+        
+<div class="component-text " data-text="">
+    </div>
+        
+<div class="component-form component-form--short component-form--white" data-form-id="5" data-redirect="">
+        <div role="form" class="wpcf7" id="wpcf7-f5-p2-o4" lang="en-US" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f5-p2-o4" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="5" />
+<input type="hidden" name="_wpcf7_version" value="5.6.1" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-p2-o4" />
+<input type="hidden" name="_wpcf7_container_post" value="2" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</div>
+<p><label><span class="wpcf7-form-control-wrap" data-name="your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="work email" /></span></label><br />
+<span id="wpcf7-63107f6f2299f-wrapper" class="wpcf7-form-control-wrap department-name-wrap" style="display:none !important; visibility:hidden !important;"><label for="wpcf7-63107f6f2299f-field" class="hp-message">Please leave this field empty.</label><input id="wpcf7-63107f6f2299f-field"  class="wpcf7-form-control wpcf7-text" type="text" name="department-name" value="" size="40" tabindex="-1" autocomplete="new-password" /></span><br />
+<input type="submit" value="See it Live" class="wpcf7-form-control has-spinner wpcf7-submit rqst_demo_btn" /></p>
+<input type="hidden" name="lead-source" value="Demo Request" class="wpcf7-form-control wpcf7-hidden" />
+<input type='hidden' class='wpcf7-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' /><div class="wpcf7-response-output" aria-hidden="true"></div><input type="hidden" name="current-post-id" value="2" /></form></div>    
+    
+            <div class="component-form--success" style="display: none;">
+            <h3></h3>
+            <p></p>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="maven-block maven-block_cta_bar page-home__footer-why style--gray size--large">
+    <div class="maven-block_cta_bar__inner">
+        
+<h2 class="component-title ">
+    Why Storemaven?
+</h2>
+        
+<div class="component-text " data-text="When 70% of users drop from your app store page In just three seconds, you need to understand what they’re seeing (or not seeing) that’s driving that decision-making.
+The answers lie in testing. App A/B testing. Google play store A/B testing. App store A/B testing.
+We’ll surface winning creative variations for your app store page, and reveal actionable insights you can strategize with, guiding you on your ab testing for mobile apps.
+Storemaven is the world’s best app store creative testing solution built by the world’s best ASO specialists and data scientists. We help folks like you increase app store conversion rates while paying less for every install. Sounds good, right? Storemaven’s got you covered.
+">
+    <p>When 70% of users drop from your app store page In just three seconds, you need to understand what they’re seeing (or not seeing) that’s driving that decision-making.</p>
+<p>The answers lie in testing. App A/B testing. Google play store A/B testing. App store A/B testing.</p>
+<p>We’ll surface winning creative variations for your app store page, and reveal actionable insights you can strategize with, guiding you on your ab testing for mobile apps.</p>
+<p>Storemaven is the world’s best app store creative testing solution built by the world’s best ASO specialists and data scientists. We help folks like you increase app store conversion rates while paying less for every install. Sounds good, right? Storemaven’s got you covered.</p>
+</div>
+            </div>
+</div>				
+			</main>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<div class="wrapper" id="wrapper-footer">
+
+	<div class="container-fluid">
+
+		<div class="row">
+
+			<div class="col-md-12">
+
+				<footer class="site-footer" id="colophon">
+
+					<div class="site-info">
+
+						    <div class="partial-footer--top">
+        <div class="partial-footer_section partial-footer_section--first">
+        <section class="widget-odd widget-last widget-first widget-1 widget text-2 widget_text">			<div class="textwidget"><p><strong>Join 10,000 other mobile marketers</strong> and stay on top of your craft with ASO Food for Thought newsletter</p>
+
+    
+    
+    
+<div class="component-form component-form--short component-form--dark" data-form-id="302" data-redirect="">
+        <div role="form" class="wpcf7" id="wpcf7-f302-o5" lang="en-US" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f302-o5" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="302" />
+<input type="hidden" name="_wpcf7_version" value="5.6.1" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f302-o5" />
+<input type="hidden" name="_wpcf7_container_post" value="0" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</div>
+<p><label><span class="wpcf7-form-control-wrap" data-name="your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Work Email" /></span></label><br />
+<span id="wpcf7-63107f6f24f35-wrapper" class="wpcf7-form-control-wrap department-name-wrap" style="display:none !important; visibility:hidden !important;"><label for="wpcf7-63107f6f24f35-field" class="hp-message">Please leave this field empty.</label><input id="wpcf7-63107f6f24f35-field"  class="wpcf7-form-control wpcf7-text" type="text" name="department-name" value="" size="40" tabindex="-1" autocomplete="new-password" /></span><br />
+<input type="submit" value="Sign Me Up" class="wpcf7-form-control has-spinner wpcf7-submit" /></p>
+<input type="hidden" name="lead-source" value="Newsletter Subscription" class="wpcf7-form-control wpcf7-hidden" />
+<input type='hidden' class='wpcf7-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' /><div class="wpcf7-response-output" aria-hidden="true"></div><input type="hidden" name="current-post-id" value="2" /></form></div>    
+    
+            <div class="component-form--success" style="display: none;">
+            <h3>Thank you!</h3>
+            <p>Check your inbox in a few</p>
+        </div>
+    </div>
+
+</div>
+		</section>        </div>
+
+        <div class="partial-footer_section partial-footer_section--second">
+        <section class="widget-odd widget-first widget-1 widget nav_menu-2 widget_nav_menu"><h3>Product</h3><div class="menu-footer-product-container"><ul id="menu-footer-product" class="menu"><li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22"><a href="https://www.storemaven.com/product/">Product Overview</a></li>
+<li id="menu-item-28516" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28516"><a href="https://www.storemaven.com/ios-15-aso-platform/">Growth Intelligence Platform</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23"><a href="https://www.storemaven.com/why-storemaven/">Why Storemaven?</a></li>
+</ul></div></section><section class="widget-even widget-2 widget nav_menu-3 widget_nav_menu"><h3>Services</h3><div class="menu-footer-services-container"><ul id="menu-footer-services" class="menu"><li id="menu-item-24" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24"><a href="https://www.storemaven.com/services/">Services Overview</a></li>
+</ul></div></section><section class="widget-odd widget-3 widget nav_menu-4 widget_nav_menu"><h3>Demo</h3><div class="menu-footer-demo-container"><ul id="menu-footer-demo" class="menu"><li id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25"><a href="https://www.storemaven.com/demo/">Demo Request</a></li>
+</ul></div></section><section class="widget-even widget-last widget-4 widget nav_menu-12 widget_nav_menu"><div class="menu-mobile-footer-menu-container"><ul id="menu-mobile-footer-menu" class="menu"><li id="menu-item-293" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-293"><a href="#">Product</a>
+<ul class="sub-menu">
+	<li id="menu-item-1748" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1748"><a href="https://www.storemaven.com/mobile-aso-testing-product/">Product</a></li>
+	<li id="menu-item-28515" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28515"><a href="https://www.storemaven.com/ios-15-aso-platform/">Growth Intelligence Platform</a></li>
+	<li id="menu-item-3680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3680"><a href="https://www.storemaven.com/why-storemaven-aso/">Why Storemaven</a></li>
+</ul>
+</li>
+<li id="menu-item-294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-294"><a href="#">ASO Academy</a>
+<ul class="sub-menu">
+	<li id="menu-item-7704" class="menu-item menu-item-type-post_type menu-item-object-academy-article menu-item-7704"><a href="https://www.storemaven.com/academy/app-store-optimization-guide/">App Store Optimization (ASO) Guide</a></li>
+	<li id="menu-item-2947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2947"><a href="https://www.storemaven.com/academy/">ASO Academy Home</a></li>
+</ul>
+</li>
+<li id="menu-item-295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-295"><a href="#">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-2948" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2948"><a href="https://www.storemaven.com/app-store-optimization-services/">Services Overview</a></li>
+</ul>
+</li>
+<li id="menu-item-296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-296"><a href="#">ASO Blog</a>
+<ul class="sub-menu">
+	<li id="menu-item-2949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2949"><a href="https://www.storemaven.com/aso-blog/">ASO Blog</a></li>
+</ul>
+</li>
+<li id="menu-item-4468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4468"><a href="#">Use Cases</a>
+<ul class="sub-menu">
+	<li id="menu-item-4469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4469"><a href="https://www.storemaven.com/mobile-organic-growth/">Organic Growth</a></li>
+	<li id="menu-item-4470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4470"><a href="https://www.storemaven.com/paid-mobile-growth-aso/">Paid Growth</a></li>
+	<li id="menu-item-4471" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4471"><a href="https://www.storemaven.com/google-play-aso-experiments/">Google Experiments</a></li>
+	<li id="menu-item-4472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4472"><a href="https://www.storemaven.com/mobile-app-concept-testing/">Concept Testing</a></li>
+	<li id="menu-item-4473" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4473"><a href="https://www.storemaven.com/prelaunch-testing/">Prelaunch Testing</a></li>
+</ul>
+</li>
+<li id="menu-item-298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-298"><a href="#">ASO Tools</a>
+<ul class="sub-menu">
+	<li id="menu-item-2950" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2950"><a href="https://www.storemaven.com/aso-tool-box/">ASO Tool Box</a></li>
+</ul>
+</li>
+<li id="menu-item-299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-299"><a href="#">Clients</a>
+<ul class="sub-menu">
+	<li id="menu-item-2951" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2951"><a href="https://www.storemaven.com/clients/">Clients Overview</a></li>
+</ul>
+</li>
+<li id="menu-item-300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-300"><a href="#">Company</a>
+<ul class="sub-menu">
+	<li id="menu-item-2952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2952"><a href="https://www.storemaven.com/about-us/">About Us</a></li>
+	<li id="menu-item-2953" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2953"><a href="https://jobsimulator.unboxable.com/allpositions?comName=Storemaven&#038;posId=c14ebc76-fb05-48bd-8dc1-1975376474fc&#038;comId=2b1ab34c-b38b-46f6-be78-0a421c3e2ec6&#038;refCode=undefined">Jobs</a></li>
+</ul>
+</li>
+</ul></div></section>        </div>
+
+        <div class="partial-footer_section partial-footer_section--third">
+        <section class="widget-odd widget-first widget-1 widget nav_menu-6 widget_nav_menu"><h3>Clients</h3><div class="menu-footer-clients-container"><ul id="menu-footer-clients" class="menu"><li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"><a href="https://www.storemaven.com/clients/">Case Studies</a></li>
+</ul></div></section><section class="widget-even widget-last widget-2 widget nav_menu-7 widget_nav_menu"><h3>Use Cases</h3><div class="menu-footer-use-cases-container"><ul id="menu-footer-use-cases" class="menu"><li id="menu-item-4464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4464"><a href="https://www.storemaven.com/mobile-organic-growth/">Organic Growth</a></li>
+<li id="menu-item-4463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4463"><a href="https://www.storemaven.com/paid-mobile-growth-aso/">Paid Growth</a></li>
+<li id="menu-item-4467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4467"><a href="https://www.storemaven.com/google-play-aso-experiments/">Google Experiments</a></li>
+<li id="menu-item-4465" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4465"><a href="https://www.storemaven.com/mobile-app-concept-testing/">Concept Testing</a></li>
+<li id="menu-item-4466" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4466"><a href="https://www.storemaven.com/prelaunch-testing/">Prelaunch Testing</a></li>
+</ul></div></section>        </div>
+
+        <div class="partial-footer_section partial-footer_section--fourth">
+        <section class="widget-odd widget-last widget-first widget-1 widget nav_menu-8 widget_nav_menu"><h3>ASO Academy</h3><div class="menu-footer-aso-academy-container"><ul id="menu-footer-aso-academy" class="menu"><li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38"><a href="https://www.storemaven.com/academy/">Academy Home</a></li>
+<li id="menu-item-7703" class="menu-item menu-item-type-post_type menu-item-object-academy-article menu-item-7703"><a href="https://www.storemaven.com/academy/app-store-optimization-guide/">App Store Optimization (ASO) Guide</a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39"><a href="https://www.storemaven.com/glossary/">ASO Glossary</a></li>
+<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a href="https://www.storemaven.com/academy/topic/app-store-testing/">App Store Testing</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="https://www.storemaven.com/academy/topic/creative-optimization/">Creative Optimization</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a href="https://www.storemaven.com/academy/topic/discoverability/">Discoverability</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a href="https://www.storemaven.com/academy/topic/user-acquisition/">User Acquisition</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="https://www.storemaven.com/academy/topic/mobile-growth/">Mobile Growth</a></li>
+</ul></div></section>        </div>
+
+        <div class="partial-footer_section partial-footer_section--fifth">
+        <section class="widget-odd widget-first widget-1 widget nav_menu-9 widget_nav_menu"><h3>ASO Blog</h3><div class="menu-footer-aso-blog-container"><ul id="menu-footer-aso-blog" class="menu"><li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45"><a href="https://www.storemaven.com/aso-blog/">Blog Home</a></li>
+<li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a href="https://www.storemaven.com/category/aso-landscape/">ASO Landscape</a></li>
+<li id="menu-item-49" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49"><a href="https://www.storemaven.com/category/aso-food-for-thought/">ASO Food for Thought</a></li>
+</ul></div></section><section class="widget-even widget-last widget-2 widget nav_menu-10 widget_nav_menu"><h3>ASO Tools</h3><div class="menu-footer-aso-tools-container"><ul id="menu-footer-aso-tools" class="menu"><li id="menu-item-50" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50"><a href="https://www.storemaven.com/aso-tool-box/">ASO Chrome Extension</a></li>
+</ul></div></section>        </div>
+
+        <div class="partial-footer_section partial-footer_section--last">
+        <section class="widget-odd widget-last widget-first widget-1 widget nav_menu-11 widget_nav_menu"><h3>Company</h3><div class="menu-footer-company-container"><ul id="menu-footer-company" class="menu"><li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51"><a href="https://www.storemaven.com/about-us/">About Us</a></li>
+<li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52"><a href="https://jobsimulator.unboxable.com/storemaven.com/all-positions">Careers</a></li>
+</ul></div></section>        </div>
+    </div>
+
+    <div class="partial-footer--bottom">
+        <div class="partial-footer_section partial-footer_section--bottom-left">
+        <section class="widget-odd widget-first widget-1 widget media_image-2 widget_media_image"><a href="/"><img width="200" height="54" src="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto/v1591124850/Storemaven-full-logo-dark@2x-8.png" class="image wp-image-2944  attachment-200x54 size-200x54" alt="Storemaven full logo dark" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto//v1591124850/Storemaven-full-logo-dark@2x-8.png 1331w, https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto//v1591124850/Storemaven-full-logo-dark@2x-8.png 300w, https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto//v1591124850/Storemaven-full-logo-dark@2x-8.png 1024w, https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto//v1591124850/Storemaven-full-logo-dark@2x-8.png 768w, https://res.cloudinary.com/storemaven/image/upload/q_90/f_auto//w_920,h_auto,c_limit/v1591124850/Storemaven-full-logo-dark@2x-8.png 920w" sizes="(max-width: 200px) 100vw, 200px" /></a></section><section class="widget-even widget-last widget-2 widget text-12 widget_text">			<div class="textwidget"><p><a href="https://www.nmore.co/" target="_blank" rel="noopener">Designed by </a><a href="https://www.nmore.co/" target="_blank" rel="noopener"><img loading="lazy" class="alignnone wp-image-2979 size-full" src="https://www.storemaven.com/wp-content/uploads/2020/06/more-logo-1.png" alt="" width="47" height="15" /></a></p>
+</div>
+		</section>        </div>
+
+        <div class="partial-footer_section partial-footer_section--bottom-right">
+        <section class="widget-odd widget-first widget-1 widget nav_menu-5 widget_nav_menu"><div class="menu-footer-legal-container"><ul id="menu-footer-legal" class="menu"><li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="/terms-of-service">Terms of Service</a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a href="/privacy-policy">Privacy Policy</a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a href="/cookie-policy/">Cookie Policy</a></li>
+<li id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"><a href="/gdpr/">GDPR Security</a></li>
+<li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"><a href="/dpa">DPA</a></li>
+</ul></div></section><section class="widget-even widget-last widget-2 widget text-11 widget_text">			<div class="textwidget"><div class="ac-gf-footer-legal-copyright"><a href="https://www.storemaven.com">© 2022 Storemaven</a></div>
+</div>
+		</section>        </div>
+    </div>
+
+
+					</div><!-- .site-info -->
+
+				</footer><!-- #colophon -->
+
+			</div><!--col end -->
+
+		</div><!-- row end -->
+
+	</div><!-- container end -->
+
+</div><!-- wrapper end -->
+
+
+</div><!-- #page we need this extra closing tag here -->
+
+
+<div class="maven-component--cookies-notice" style="display: none;">
+    <div class="cookies-notice-inner">
+        <div class="cookies-notice-inner-text">
+            Cookies! We use cookies on our websites. By continuing to browse the site, you are agreeing to our use of cookies. To learn more <a href="/cookie-policy/" target="_blank" rel="noopener">click here</a>.        </div>
+
+        <a href="#" class="btn btn-accept">I Understand</a>
+    </div>
+</div><style>.wp-container-1 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-1 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-1 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/www.storemaven.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.6.1' id='contact-form-7-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/cache/min/1/wp-content/themes/storemaven/src/js/smbq.js?ver=1659343627' id='smbq-js-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/themes/storemaven/src/js/slick.min.js?ver=1656318691' id='slickjs-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/themes/storemaven/src/js/nouislider.min.js?ver=1656318691' id='nouislider-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/themes/storemaven/src/js/video-js.min.js?ver=1656318691' id='video-js-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/themes/storemaven/src/js/select2.min.js?ver=1656318691' id='select2-js-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/themes/storemaven/src/js/jquery.custom-scrollbar.js?ver=1656318691' id='custom-scrollbar-js-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/themes/storemaven/src/js/jquery.easy-autocomplete.min.js?ver=1656318691' id='easyautocomplete-js-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/themes/storemaven/src/js/jquery.fancybox.min.js?ver=1656318691' id='fancybox-js-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/themes/storemaven/src/js/js.cookie.min.js?ver=1656318691' id='js-cookies-js-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/themes/storemaven/src/js/macy.min.js?ver=1656318691' id='macy-js-js' defer></script>
+<script type='text/javascript' id='child-understrap-scripts-js-extra'>
+/* <![CDATA[ */
+var maven = {"post_id":"2","ajax_url":"https:\/\/www.storemaven.com\/wp-admin\/admin-ajax.php","env":"production"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/cache/min/1/wp-content/themes/storemaven/dist/js/child-theme.js?ver=1659343627' id='child-understrap-scripts-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/themes/storemaven/src/js/lozad.min.js?ver=1656318691' id='lozad-js-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='heateor_sss_sharing_js-js-before'>
+function heateorSssLoadEvent(e) {var t=window.onload;if (typeof window.onload!="function") {window.onload=e}else{window.onload=function() {t();e()}}};	var heateorSssSharingAjaxUrl = 'https://www.storemaven.com/wp-admin/admin-ajax.php', heateorSssCloseIconPath = 'https://www.storemaven.com/wp-content/plugins/sassy-social-share/public/../images/close.png', heateorSssPluginIconPath = 'https://www.storemaven.com/wp-content/plugins/sassy-social-share/public/../images/logo.png', heateorSssHorizontalSharingCountEnable = 0, heateorSssVerticalSharingCountEnable = 0, heateorSssSharingOffset = -10; var heateorSssMobileStickySharingEnabled = 0;var heateorSssCopyLinkMessage = "Link copied.";var heateorSssUrlCountFetched = [], heateorSssSharesText = 'Shares', heateorSssShareText = 'Share';function heateorSssPopup(e) {window.open(e,"popUpWindow","height=400,width=600,left=400,top=100,resizable,scrollbars,toolbar=0,personalbar=0,menubar=no,location=no,directories=no,status")}
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://www.storemaven.com/wp-content/cache/min/1/wp-content/plugins/sassy-social-share/public/js/sassy-social-share-public.js?ver=1659343627' id='heateor_sss_sharing_js-js' defer></script>
+
+</body>
+
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
